@@ -1,5 +1,6 @@
 import random
 import time
+import datetime
 
 
 def yes_no(question_text):
@@ -20,8 +21,9 @@ def yes_no(question_text):
 def strip_string(string):
     return "".join(string.rstrip().lstrip())
 
+
 # Game for score
-def game_start(last_q, score):
+def game_start(last_q, score, name):
     te_reo_numbers = {
         "1": "tahi",
         "2": "rua",
@@ -54,19 +56,31 @@ def game_start(last_q, score):
         print(correct[random.randint(1, 4)])
         last_q = question
         time.sleep(0.4)
-        game_start(last_q, score)
+        game_start(last_q, score, name)
     else:  # incorrect
         print(f"{incorrect[random.randint(1, 2)]} You're score was: {score} points")
-        scoreboard(score)
+        scoreboard(score, name)
         # no need for int checker, it will be wrong either way.
         # from here send to score board.
 
 
-def scoreboard(score):
-    f = open("1st.txt", "r")
-    if f.read() == "empty":
-        f = open("1st.txt", "w")
+def scoreboard(score, name):
+    print("Your score has been sent!")
+    date = datetime.datetime.now()
+    filenum = 1
+    f = open(f"{filenum}th.txt", "r")
+    if f.read() == "Empty":
+        f = open(f"{filenum}th.txt", "w")
         f.write(f"{score}")
+        f = open(f"{filenum}th.txt", "a")
+        f.write(f' - {name} - {date.strftime("%c")}')
+    else:
+        if filenum > 5:
+            return  # send to replay func
+        filenum += 1
+        scoreboard(score, name)
 
 
-def resetboard():
+game_start(0, 0, "nikki")
+
+# very broken atm
