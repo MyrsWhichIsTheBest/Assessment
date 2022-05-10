@@ -39,7 +39,7 @@
       <recent name="C:\Users\Tim Na\OneDrive - Middleton Grange School\2022\Comp Sci\Programming 1.7\1.7, 1.8 Assessment\Assessment" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.MAIN GAME v1">
+  <component name="RunManager" selected="Python.SCOREBOARD">
     <configuration name="INTRO AND RULES" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Assessment" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -82,7 +82,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="mock-up quiz" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="SCOREBOARD" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Assessment" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -94,7 +94,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mock-up quiz.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SCOREBOARD.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -147,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.SCOREBOARD" />
         <item itemvalue="Python.MAIN GAME v1" />
         <item itemvalue="Python.INTRO AND RULES" />
         <item itemvalue="Python.ys" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.mock-up quiz" />
       </list>
     </recent_temporary>
   </component>
