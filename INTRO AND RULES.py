@@ -17,12 +17,9 @@ def yes_no(question_text):
 
 
 print("Welcome to the Te Reo Counting Quiz!\n"
-      "*clapping sounds*\n"
-      "Now time to introduce the contestant for tonight!")
-time.sleep(1)
-name = input("Whats your name?: ")
-time.sleep(0.4)
-print(f"Welcome, {name}, to the Show!\n")
+      "*clapping sounds*")
+time.sleep(0.6)
+print(f"Welcome to the Show!\n")
 show_instructions = yes_no("Have you played before? ")
 if show_instructions == "No":
     time.sleep(0.5)
