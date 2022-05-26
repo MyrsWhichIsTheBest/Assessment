@@ -1,3 +1,6 @@
+"""
+In this version, I updated it so duplicate numbers cannot occur and added lines for the player.
+"""
 import time
 import random
 
@@ -6,7 +9,8 @@ def strip_string(string):
     return "".join(string.rstrip().lstrip())
 
 
-def game_start(score):
+def game_start(last_q, score):
+    question = str(random.randint(1, 10))
     te_reo_numbers = {
         "1": "tahi",
         "2": "rua",
@@ -19,35 +23,30 @@ def game_start(score):
         "9": "iwa",
         "10": "tekau"
     }
-    question = str(random.randint(1, 10))
+    correct = {
+        1: "Nice!",
+        2: "Awesome!",
+        3: "Great!",
+        4: "Better than mama!"
+    }
+    incorrect = {
+        1: "Nice try!",
+        2: "Almost, but not quite!"
+    }
+    while question == last_q:
+        question = str(random.randint(1, 10))
     answer = strip_string(input(f"What is {te_reo_numbers[question]}"))
-    if answer == question:  # correct
+    if answer == question:
         score += 1
-        print("Correct!")
+        print(correct[random.randint(1, 4)])
+        last_q = question
         time.sleep(0.4)
-        game_start(score)
-    else:  # incorrect
-        print(f"Wrong! You're score was: {score} points")
-        # no need for int checker, it will be wrong either way.
-        # from here send to score board.
+        game_start(last_q, score)
+    else:
+        print(f"{incorrect[random.randint(1, 2)]} You're score was: {score} points")
 
 
 # Main
 # Game start
-game_start(0)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+x = 0
+game_start(x, x)

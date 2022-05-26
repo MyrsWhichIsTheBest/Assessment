@@ -1,3 +1,7 @@
+"""
+This will be a part of the Main.
+This will introduce and teach how to play the game.
+"""
 import time
 
 

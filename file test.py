@@ -1,3 +1,6 @@
+"""
+This is a place for me to mess around with file handling in python. (Ignore)
+"""
 import datetime
 
 file = 1

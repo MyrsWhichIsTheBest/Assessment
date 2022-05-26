@@ -1,3 +1,7 @@
+"""
+I have rewritten all the code.
+It seems more efficient.
+"""
 import time
 import random
 

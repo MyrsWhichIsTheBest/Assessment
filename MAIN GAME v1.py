@@ -1,12 +1,17 @@
+"""
+This is the basic game.
+It takes a random number and sends it through the dictionary and from there it prints.
+Then it asks the player what number it is.
+"""
 import time
 import random
+
 
 def strip_string(string):
     return "".join(string.rstrip().lstrip())
 
 
-def game_start(last_q, score):
-    question = str(random.randint(1, 10))
+def game_start(score):
     te_reo_numbers = {
         "1": "tahi",
         "2": "rua",
@@ -19,30 +24,35 @@ def game_start(last_q, score):
         "9": "iwa",
         "10": "tekau"
     }
-    correct = {
-        1: "Nice!",
-        2: "Awesome!",
-        3: "Great!",
-        4: "Better than mama!"
-    }
-    incorrect = {
-        1: "Nice try!",
-        2: "Almost, but not quite!"
-    }
-    while question == last_q:
-        question = str(random.randint(1, 10))
+    question = str(random.randint(1, 10))
     answer = strip_string(input(f"What is {te_reo_numbers[question]}"))
-    if answer == question:
+    if answer == question:  # correct
         score += 1
-        print(correct[random.randint(1, 4)])
-        last_q = question
+        print("Correct!")
         time.sleep(0.4)
-        game_start(last_q, score)
-    else:
-        print(f"{incorrect[random.randint(1, 2)]} You're score was: {score} points")
+        game_start(score)
+    else:  # incorrect
+        print(f"Wrong! You're score was: {score} points")
+        # no need for int checker, it will be wrong either way.
+        # from here send to score board.
 
 
 # Main
 # Game start
-x = 0
-game_start(x, x)
+game_start(0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
